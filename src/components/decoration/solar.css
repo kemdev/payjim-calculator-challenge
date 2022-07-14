@@ -1,0 +1,16 @@
+.solar {
+  height: 80px;
+  background: #000000;
+  border-radius: 10px;
+  /* -webkit-box-shadow: inset 0px 0px 15px 5px #834a28; */
+  /* box-shadow: inset 0px 0px 6px 3px #c6488c; */
+  width: 20rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /* border: 1px solid #ddd; */
+  background: rgb(0 0 0 / 74%);
+  /* border-radius: 16px; */
+  box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+}

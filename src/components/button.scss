@@ -1,0 +1,24 @@
+$symbolColor: #c6488c;
+$symbolColorHover: #991a5e;
+$symbolColorActive: #e06ba9;
+
+$numberColor: #ff914d;
+
+.button {
+  // background: $numberColor;
+  display: grid;
+  place-content: center;
+  color: #fff;
+  font-weight: 500;
+  font-size: 40px;
+  border-radius: 36px;
+}
+
+
+.align-sub {
+  vertical-align: -webkit-baseline-middle;
+}
+
+.align-middle {
+  vertical-align: super;
+}

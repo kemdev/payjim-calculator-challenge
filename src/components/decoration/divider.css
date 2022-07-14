@@ -1,0 +1,8 @@
+.divider{
+    height: 19px;
+    background: #cac8c8;
+    border-radius: inherit;
+    /* -webkit-box-shadow: inset 0px 0px 15px 5px #834a28; */
+    /* box-shadow: inset 0px 0px 6px 3px #c6488c; */
+    width: 20rem;
+}

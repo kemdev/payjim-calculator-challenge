@@ -1,0 +1,30 @@
+@font-face {
+    font-family: displayFont;
+    src: url(../fonts/displayFont-bold.woff2);
+}
+
+.display{
+    height: 160px;
+    background-color: #fff;
+    border-radius: 36px;
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: displayFont;
+    font-weight: 700;
+    // color: #000;
+    font-size: 60px;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.memo{
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    font-size: 2rem;
+    color: grey;
+}
