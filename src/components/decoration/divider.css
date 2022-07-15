@@ -1,8 +1,10 @@
-.divider{
-    height: 19px;
-    background: #cac8c8;
-    border-radius: inherit;
-    /* -webkit-box-shadow: inset 0px 0px 15px 5px #834a28; */
-    /* box-shadow: inset 0px 0px 6px 3px #c6488c; */
-    width: 20rem;
+.divider {
+  height: 19px;
+  /* -webkit-box-shadow: inset 0px 0px 15px 5px #834a28; */
+  /* box-shadow: inset 0px 0px 6px 3px #c6488c; */
+  width: 20rem;
+  border-radius: 10px;
+  
+background: linear-gradient(145deg, #13140D, #1B1C13);
+box-shadow: inset 0px 6px 7px 0px #12130c, inset 0px -6px 5px #1c1d14
 }

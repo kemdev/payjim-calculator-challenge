@@ -13,4 +13,10 @@
   box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
+  box-shadow: rgb(182 123 33 / 15%) 0px 2px 8px 0px;
+}
+
+.solar > div:not(:first-child) {
+  -webkit-backdrop-filter: blur(6.5px);
+  box-shadow: rgb(182 123 33 / 15%) 0px 2px 8px 0px;
 }

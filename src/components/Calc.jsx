@@ -6,8 +6,11 @@ import Display from "./Display";
 import Button from "./Button";
 
 // import Calculator Decor
-import Solar from './decoration/Solar'
+import Solar from "./decoration/Solar";
 import Divider from "./decoration/Divider";
+
+// import Tilt
+import Tilt from "react-parallax-tilt";
 
 export default function Calc() {
   const digit = Array.from({ length: 9 }, (_, i) => i + 1);
@@ -18,12 +21,6 @@ export default function Calc() {
   const [result, setResult] = useState("");
   const [curretnSymb, setCurrentSymb] = useState("");
 
-  // round function
-  // function round(num) {
-  //   let m = Number((Math.abs(num) * 100).toPrecision(15));
-  //   return ((Math.round(m) / 100) * Math.sign(num)).toFixed(2);
-  // }
-
   function round(num, precision) {
     precision = Math.pow(10, precision);
     return Math.ceil(num * precision) / precision;
@@ -31,9 +28,13 @@ export default function Calc() {
 
   // show the clicked numbers
   const handleNumbers = (val) => {
+    // stop add '.' when there is a dot exit
+    if (val === "." && displayValue.indexOf(val) !== -1) return;
+    if (displayValue.length >= 20) return alert("too much input");
     if (curretnSymb === "=") return alert("please select an operator");
     if (Number(displayValue) === result /*  && result !== 0 */)
       return setDisplayValue("");
+
     setDisplayValue(displayValue + val);
   };
 
@@ -69,15 +70,13 @@ export default function Calc() {
 
   // when press equal
   const handleResult = (e) => {
-    let toNum = 0;
-    if (result !== Number(displayValue)) {
-      toNum = Number(displayValue) !== 0 && Number(displayValue) || 0;
+    let toNum = Number(displayValue) || 0;
+    if (result !== toNum) {
+      toNum = (toNum !== 0 && toNum) || 0;
     }
 
-    console.log('from resutl func', toNum)
-
     // if (eval(memo)) {
-    let evalResult = eval(memo);
+    let evalResult = eval(memo.replace(/[÷]/g, "/").replace(/[×]/g, "*"));
     switch (curretnSymb) {
       case "+":
         setResult(evalResult + toNum);
@@ -106,14 +105,29 @@ export default function Calc() {
       setDisplayValue(round(Number(result), 2).toString());
   }, [result]);
 
-  // TODO README file with instruction
-  // TODO fix when hit the OPERATOR twice is adding +0 to the Memo
-
-
+  console.log("Display", displayValue.length);
 
   return (
-    <div className="calc container" tabIndex='0' onKeyDown={e => console.log('A key has been pressed', e.key)} >
-      <Solar /> 
+    // <Tilt
+    //   // tiltEnable={false}
+
+    //   // Tilt Property
+    //   tiltMaxAngleX={2}
+    //   tiltMaxAngleY={2}
+
+    //   // Glare effect
+    //   glareEnable={true}
+    //   glareBorderRadius="36px"
+    //   glareMaxOpacity={0.3}
+    //   glareColor="#fff"
+    //   glarePosition="all"
+    // >
+    <div
+      className="calc container"
+      tabIndex="0"
+      onKeyDown={(e) => console.log("A key has been pressed", e.key)}
+    >
+      <Solar />
       <Display
         value={displayValue}
         memo={memo}
@@ -123,8 +137,7 @@ export default function Calc() {
 
       <Divider />
 
-
-      <div className="parent ">
+      <div className="parent col-xs-4 p-3">
         {buttons.map((button, index) => (
           <Button
             clickFunc={
@@ -147,5 +160,6 @@ export default function Calc() {
         ))}
       </div>
     </div>
+    //</Tilt>
   );
 }

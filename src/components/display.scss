@@ -10,13 +10,13 @@
     margin: 15px;
     padding: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-family: displayFont;
     font-weight: 700;
     // color: #000;
     font-size: 60px;
-    flex-direction: column;
+    // flex-direction: column;
     position: relative;
 }
 
@@ -27,4 +27,11 @@
     right: 2rem;
     font-size: 2rem;
     color: grey;
+}
+
+
+
+// display Icon stuff
+.displayIcon-parent{
+    height: 100%;
 }

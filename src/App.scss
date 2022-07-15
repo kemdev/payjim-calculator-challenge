@@ -1,0 +1,82 @@
+.App {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: #550083;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+
+img{
+    width: 100%;
+}
+
+.leftImage{
+    align-items: center;
+}
+
+.rightImage{
+    align-items: self-start;
+}
+
+.rightImage img{
+    width: 100%;
+}
+
+.calcCol{
+    width: fit-content !important;
+}
+
+
+
+// @media screen and (min-width: 600px) and (max-width: 1600px) {
+//   .top,
+//   .bottom,
+//   .middle {
+//     width: 100%;
+//   }
+// }
+
+// @media screen and (min-width: 1701px) {
+//   .rightImage {
+//     align-items: center;
+//   }
+//   .top {
+//     width: 50%;
+//   }
+//   .bottom {
+//     height: 50%;
+//   }
+//   .middle {
+//     transform: scale(1) rotate(16deg);
+//     width: 100%;
+//   }
+//   .books {
+//     width: 100%;
+//   }
+// }
+// @media screen and (min-width: 1601px) and (max-width: 1700px) {
+//   .top,
+//   .bottom,
+//   .middle, .books {
+//     width: 100%;
+//   }
+//   //     .middle {
+//   //         transform: scale(1.5) rotate(16deg);
+//   //   }
+// }
+// @media screen and (max-width: 1450px) {
+//   .middle {
+//         transform: scale(1.8) rotate(16deg);
+//   }
+// }
+
+// @media screen and (max-width: 1100px) {
+//   .top,
+//   .bottom,
+//   .middle, .books {
+//     opacity: 0;
+//     transition: all 0.5s ease-in-out;
+//   }
+// }

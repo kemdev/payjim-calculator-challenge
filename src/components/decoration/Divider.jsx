@@ -4,6 +4,6 @@ import './divider.css'
 
 export default function Divider() {
   return (
-    <div className='divider m-3 mx-auto'></div>
+    <div className='divider mx-auto'></div>
   )
 }
