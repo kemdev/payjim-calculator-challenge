@@ -29,7 +29,7 @@ function App() {
             <MDBCol size={6} className="calcCol">
               <Calc />
             </MDBCol>
-            <MDBCol size={3}>
+            <MDBCol size={3} className='h-100'>
               <div
                 className="rightImage d-flex flex-column h-100 user-select-none"
                 style={{ justifyContent: "space-between" }}

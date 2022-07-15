@@ -34,9 +34,6 @@ export default function Modal({ modalStatus, setModalStatus }) {
         setText("Please select an Operator");
     }
   }, [code]);
-
-  console.log("Code is", code);
-
   return (
     <>
       <MDBModal className="modal" tabIndex="-1" show={centredModal} setShow={setCentredModal}>

@@ -22,9 +22,9 @@ export default function Calc() {
   const [curretnSymb, setCurrentSymb] = useState("");
 
   // to open modal when no operator selected after the result.
-  const [modalStatus , setModalStatus] = useState('')
+  const [modalStatus, setModalStatus] = useState("");
   // modal text
-  const [text, setText] = useState({})
+  const [text, setText] = useState({});
 
   function round(num, precision) {
     precision = Math.pow(10, precision);
@@ -35,8 +35,8 @@ export default function Calc() {
   const handleNumbers = (val) => {
     // stop add '.' when there is a dot exit
     if (val === "." && displayValue.indexOf(val) !== -1) return;
-    if (displayValue.length >= 19) return setModalStatus({code: 1});
-    if (curretnSymb === "=") return setModalStatus({code: 2});
+    if (displayValue.length >= 19) return setModalStatus({ code: 1 });
+    if (curretnSymb === "=") return setModalStatus({ code: 2 });
     if (Number(displayValue) === result /*  && result !== 0 */)
       return setDisplayValue("");
 
@@ -59,15 +59,15 @@ export default function Calc() {
     let toNum = Number(displayValue);
     // console.log("The toNUm", toNum);
     if (!Number.isInteger(toNum) && toNum)
-      toNum = round(Number(displayValue), 2);
-
+    toNum = round(Number(displayValue), 2);
+    
     if (result === Number(displayValue)) setMemo(result.toString());
-    else if (memo.length > 0) setMemo(memo + curretnSymb + toNum);
-    else setMemo(memo + toNum);
-
+    // else if (memo.length > 0) setMemo(memo + curretnSymb + toNum);
+    else setMemo(memo + curretnSymb + toNum );
+    
     // set the operators
-
     setCurrentSymb(op);
+
 
     // reset the screen
     setDisplayValue("");
@@ -110,9 +110,7 @@ export default function Calc() {
       setDisplayValue(round(Number(result), 2).toString());
   }, [result]);
 
-  console.log("Display", displayValue.length);
-
-  return (   
+  return (
     <div
       className="calc container"
       tabIndex="0"
