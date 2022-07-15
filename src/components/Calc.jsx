@@ -9,8 +9,8 @@ import Button from "./Button";
 import Solar from "./decoration/Solar";
 import Divider from "./decoration/Divider";
 
-// import Tilt
-import Tilt from "react-parallax-tilt";
+// import Modal
+import Modal from "./Modal";
 
 export default function Calc() {
   const digit = Array.from({ length: 9 }, (_, i) => i + 1);
@@ -21,6 +21,11 @@ export default function Calc() {
   const [result, setResult] = useState("");
   const [curretnSymb, setCurrentSymb] = useState("");
 
+  // to open modal when no operator selected after the result.
+  const [modalStatus , setModalStatus] = useState('')
+  // modal text
+  const [text, setText] = useState({})
+
   function round(num, precision) {
     precision = Math.pow(10, precision);
     return Math.ceil(num * precision) / precision;
@@ -30,8 +35,8 @@ export default function Calc() {
   const handleNumbers = (val) => {
     // stop add '.' when there is a dot exit
     if (val === "." && displayValue.indexOf(val) !== -1) return;
-    if (displayValue.length >= 20) return alert("too much input");
-    if (curretnSymb === "=") return alert("please select an operator");
+    if (displayValue.length >= 19) return setModalStatus({code: 1});
+    if (curretnSymb === "=") return setModalStatus({code: 2});
     if (Number(displayValue) === result /*  && result !== 0 */)
       return setDisplayValue("");
 
@@ -107,21 +112,7 @@ export default function Calc() {
 
   console.log("Display", displayValue.length);
 
-  return (
-    // <Tilt
-    //   // tiltEnable={false}
-
-    //   // Tilt Property
-    //   tiltMaxAngleX={2}
-    //   tiltMaxAngleY={2}
-
-    //   // Glare effect
-    //   glareEnable={true}
-    //   glareBorderRadius="36px"
-    //   glareMaxOpacity={0.3}
-    //   glareColor="#fff"
-    //   glarePosition="all"
-    // >
+  return (   
     <div
       className="calc container"
       tabIndex="0"
@@ -159,7 +150,8 @@ export default function Calc() {
           />
         ))}
       </div>
+
+      <Modal modalStatus={modalStatus} setModalStatus={setModalStatus} />
     </div>
-    //</Tilt>
   );
 }
