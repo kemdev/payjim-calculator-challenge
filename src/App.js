@@ -17,7 +17,7 @@ function App() {
     <div className="App ">
       <MDBContainer fluid>
         <div className="landingPage d-flex align-items-center  h-100">
-          <MDBRow className="align-items-center justify-content-center h-100" >
+          <MDBRow className="align-items-center justify-content-center h-100 flex-nowrap">
             <MDBCol
               size={3}
               className="leftImage d-flex flex-column h-100 user-select-none"
