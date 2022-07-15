@@ -1,3 +1,8 @@
+
+## PayJim - Calculator
+
+![calcImage](./calcImage.png)
+
 # Task
 Create a calculator that can add, subtract, multiply and divide two numbers, decimal numbers are supported.
 AC will delete the current entry if it was pressed once, and if pressed twice it will clear the entire entry.
@@ -26,7 +31,3 @@ npm i
 ```bash
 npm start
 ```
-
-## PayJim - Calculator
-
-![calcImage](./calcImage.png)
