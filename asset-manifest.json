@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/payjim-calculator-challenge/static/css/main.7dd1f5e0.css",
-    "main.js": "/payjim-calculator-challenge/static/js/main.6b550c40.js",
+    "main.js": "/payjim-calculator-challenge/static/js/main.f5b3c67f.js",
     "static/media/rightImage.png": "/payjim-calculator-challenge/static/media/rightImage.d8be365b36b8aaf0964c.png",
     "static/media/cornerSphere.png": "/payjim-calculator-challenge/static/media/cornerSphere.ab28aad328e0dc9ff1e1.png",
     "static/media/operators.png": "/payjim-calculator-challenge/static/media/operators.ad55fa44b8391ee3b2a3.png",
@@ -11,10 +11,10 @@
     "static/media/displayFont-bold.woff2": "/payjim-calculator-challenge/static/media/displayFont-bold.1488ad580ca02a221fef.woff2",
     "index.html": "/payjim-calculator-challenge/index.html",
     "main.7dd1f5e0.css.map": "/payjim-calculator-challenge/static/css/main.7dd1f5e0.css.map",
-    "main.6b550c40.js.map": "/payjim-calculator-challenge/static/js/main.6b550c40.js.map"
+    "main.f5b3c67f.js.map": "/payjim-calculator-challenge/static/js/main.f5b3c67f.js.map"
   },
   "entrypoints": [
     "static/css/main.7dd1f5e0.css",
-    "static/js/main.6b550c40.js"
+    "static/js/main.f5b3c67f.js"
   ]
 }
